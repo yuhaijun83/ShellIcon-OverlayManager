@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve"><value>エクスプローラー アイコン オーバーレイ マネージャー</value></data>
+  <data name="MenuFile" xml:space="preserve"><value>ファイル(&amp;F)</value></data>
+  <data name="MenuRefresh" xml:space="preserve"><value>更新(&amp;R)</value></data>
+  <data name="MenuExit" xml:space="preserve"><value>終了(&amp;X)</value></data>
+  <data name="MenuLanguage" xml:space="preserve"><value>言語(&amp;L)</value></data>
+  <data name="MenuTools" xml:space="preserve"><value>ツール(&amp;T)</value></data>
+  <data name="MenuRestore" xml:space="preserve"><value>削除の復元(&amp;H)</value></data>
+  <data name="MenuNew" xml:space="preserve"><value>サブキーの新規作成(&amp;N)</value></data>
+  <data name="MenuOpenDataFolder" xml:space="preserve"><value>データ フォルダーを開く(&amp;D)</value></data>
+  <data name="MenuHelp" xml:space="preserve"><value>ヘルプ(&amp;H)</value></data>
+  <data name="MenuAbout" xml:space="preserve"><value>バージョン情報(&amp;A)</value></data>
+  <data name="MenuContextEdit" xml:space="preserve"><value>編集(&amp;E)</value></data>
+  <data name="MenuContextDelete" xml:space="preserve"><value>削除(&amp;D)</value></data>
+  <data name="MenuContextCopyName" xml:space="preserve"><value>名前をコピー(&amp;C)</value></data>
+  <data name="MenuContextCopyValue" xml:space="preserve"><value>値をコピー(&amp;V)</value></data>
+  <data name="TabHklm" xml:space="preserve"><value>コンピューター 64ビット (HKEY_LOCAL_MACHINE)</value></data>
+  <data name="TabWow64" xml:space="preserve"><value>コンピューター 32ビット (WOW6432Node)</value></data>
+  <data name="ColSelect" xml:space="preserve"><value>選択</value></data>
+  <data name="ColOrder" xml:space="preserve"><value>番号</value></data>
+  <data name="ColName" xml:space="preserve"><value>サブキー名</value></data>
+  <data name="ColValue" xml:space="preserve"><value>値 (既定)</value></data>
+  <data name="ColType" xml:space="preserve"><value>種類</value></data>
+  <data name="BtnSelectAll" xml:space="preserve"><value>すべて選択</value></data>
+  <data name="BtnClearSelection" xml:space="preserve"><value>選択解除</value></data>
+  <data name="BtnInvert" xml:space="preserve"><value>選択を反転</value></data>
+  <data name="BtnDelete" xml:space="preserve"><value>選択項目を削除</value></data>
+  <data name="BtnEdit" xml:space="preserve"><value>編集</value></data>
+  <data name="BtnNew" xml:space="preserve"><value>新規作成</value></data>
+  <data name="BtnRestore" xml:space="preserve"><value>削除の復元</value></data>
+  <data name="BtnRefresh" xml:space="preserve"><value>更新</value></data>
+  <data name="BtnRestartExplorer" xml:space="preserve"><value>エクスプローラーの再起動</value></data>
+  <data name="MsgRestartExplorerConfirm" xml:space="preserve"><value>Windows エクスプローラーを再起動します。デスクトップとタスクバーが一時的に表示されなくなります。続けますか？</value></data>
+  <data name="MsgRestartExplorerFailed" xml:space="preserve"><value>エクスプローラーの再起動に失敗しました：{0}</value></data>
+  <data name="MsgExplorerRestarted" xml:space="preserve"><value>エクスプローラーを再起動しました。</value></data>
+  <data name="MsgConfirmRestartTitle" xml:space="preserve"><value>エクスプローラーの再起動</value></data>
+  <data name="MenuFontSize" xml:space="preserve"><value>フォントサイズ</value></data>
+  <data name="FontSizeSmall" xml:space="preserve"><value>小</value></data>
+  <data name="FontSizeNormal" xml:space="preserve"><value>標準</value></data>
+  <data name="FontSizeLarge" xml:space="preserve"><value>大</value></data>
+  <data name="FontSizeXLarge" xml:space="preserve"><value>特大</value></data>
+  <data name="BtnClose" xml:space="preserve"><value>閉じる</value></data>
+  <data name="BtnOk" xml:space="preserve"><value>OK</value></data>
+  <data name="BtnCancel" xml:space="preserve"><value>キャンセル</value></data>
+  <data name="BtnRestoreSelected" xml:space="preserve"><value>選択項目を復元</value></data>
+  <data name="BtnDeleteHistory" xml:space="preserve"><value>記録を削除</value></data>
+  <data name="LblSearch" xml:space="preserve"><value>検索：</value></data>
+  <data name="LblName" xml:space="preserve"><value>名前：</value></data>
+  <data name="LblValue" xml:space="preserve"><value>値 (既定)：</value></data>
+  <data name="LblValueKind" xml:space="preserve"><value>値の種類：</value></data>
+  <data name="LblRoot" xml:space="preserve"><value>ルートキー：</value></data>
+  <data name="LblOnlyUnrestored" xml:space="preserve"><value>未復元のみ表示</value></data>
+  <data name="StatusReady" xml:space="preserve"><value>準備完了</value></data>
+  <data name="StatusCount" xml:space="preserve"><value>全 {0} 件（選択 {1} 件）</value></data>
+  <data name="StatusAdmin" xml:space="preserve"><value>管理者モード</value></data>
+  <data name="StatusUser" xml:space="preserve"><value>標準ユーザー（HKLM は読み取り専用の可能性があります）</value></data>
+  <data name="MsgNoSelection" xml:space="preserve"><value>操作するサブキーをチェックしてください。</value></data>
+  <data name="MsgSelectOne" xml:space="preserve"><value>編集するサブキーを 1 つだけチェックしてください。</value></data>
+  <data name="MsgConfirmDeleteTitle" xml:space="preserve"><value>削除の確認</value></data>
+  <data name="MsgConfirmDelete" xml:space="preserve"><value>以下の {0} 個のサブキーを削除しますか？削除した内容は SQLite に保存され、「削除の復元」で元に戻せます。</value></data>
+  <data name="MsgConfirmDeleteCaption" xml:space="preserve"><value>削除されるサブキー：</value></data>
+  <data name="MsgDeleted" xml:space="preserve"><value>{0} 個のサブキーを削除しました。</value></data>
+  <data name="MsgDeleteFailed" xml:space="preserve"><value>削除中にエラーが発生しました：{0}</value></data>
+  <data name="MsgAdminRequired" xml:space="preserve"><value>HKEY_LOCAL_MACHINE を変更するには管理者権限が必要です。管理者として実行してください。</value></data>
+  <data name="MsgError" xml:space="preserve"><value>エラー</value></data>
+  <data name="MsgWarning" xml:space="preserve"><value>警告</value></data>
+  <data name="MsgInfo" xml:space="preserve"><value>情報</value></data>
+  <data name="MsgNameEmpty" xml:space="preserve"><value>サブキー名を入力してください。</value></data>
+  <data name="MsgNameInvalid" xml:space="preserve"><value>サブキー名に円記号（\）は使用できません。</value></data>
+  <data name="MsgNameExists" xml:space="preserve"><value>サブキー「{0}」は既に存在します。</value></data>
+  <data name="MsgNumberInvalid" xml:space="preserve"><value>数値が無効です。10 進数または 0x で始まる 16 進数を入力してください。</value></data>
+  <data name="MsgSaved" xml:space="preserve"><value>保存しました。</value></data>
+  <data name="EditTitle" xml:space="preserve"><value>サブキーの編集</value></data>
+  <data name="NewTitle" xml:space="preserve"><value>サブキーの新規作成</value></data>
+  <data name="RestoreTitle" xml:space="preserve"><value>操作履歴と復元</value></data>
+  <data name="ColTime" xml:space="preserve"><value>操作日時</value></data>
+  <data name="ColRoot" xml:space="preserve"><value>ルートキー</value></data>
+  <data name="ColOperation" xml:space="preserve"><value>操作</value></data>
+  <data name="ColKey" xml:space="preserve"><value>サブキー名</value></data>
+  <data name="ColDetail" xml:space="preserve"><value>詳細</value></data>
+  <data name="ColStatus" xml:space="preserve"><value>状態</value></data>
+  <data name="OpDelete" xml:space="preserve"><value>削除</value></data>
+  <data name="OpCreate" xml:space="preserve"><value>新規作成</value></data>
+  <data name="OpRename" xml:space="preserve"><value>名前の変更</value></data>
+  <data name="OpEditValue" xml:space="preserve"><value>値の変更</value></data>
+  <data name="StatusNotRestored" xml:space="preserve"><value>未復元</value></data>
+  <data name="StatusRestored" xml:space="preserve"><value>復元済み</value></data>
+  <data name="MsgRestoreConfirm" xml:space="preserve"><value>選択した {0} 件の記録を復元しますか？</value></data>
+  <data name="MsgRestored" xml:space="preserve"><value>{0} 件を復元しました。</value></data>
+  <data name="MsgRestorePartial" xml:space="preserve"><value>復元が完了しました：成功 {0} 件、スキップまたは失敗 {1} 件。{2}</value></data>
+  <data name="MsgRestoreSkip" xml:space="preserve"><value>サブキー「{0}」の状態が一致しないためスキップしました。</value></data>
+  <data name="MsgNoHistory" xml:space="preserve"><value>操作できる履歴記録がありません。</value></data>
+  <data name="MsgHistoryDeleted" xml:space="preserve"><value>履歴記録を {0} 件削除しました。</value></data>
+  <data name="MsgConfirmClearHistory" xml:space="preserve"><value>選択した {0} 件の履歴記録を削除しますか？この操作は記録の削除のみで、レジストリは変更しません。</value></data>
+  <data name="TrayShow" xml:space="preserve"><value>メイン ウィンドウを表示</value></data>
+  <data name="TrayExit" xml:space="preserve"><value>終了</value></data>
+  <data name="TrayBalloonTitle" xml:space="preserve"><value>タスクトレイに最小化しました</value></data>
+  <data name="MsgConfirmExit" xml:space="preserve"><value>ShellIcon-OverlayManager を終了してもよろしいですか？</value></data>
+  <data name="MsgConfirmExitTitle" xml:space="preserve"><value>終了の確認</value></data>
+  <data name="TrayBalloonText" xml:space="preserve"><value>トレイ アイコンをダブルクリックすると再表示できます。トレイ メニューから言語を切り替えられます。</value></data>
+  <data name="MsgRegistryMissing" xml:space="preserve"><value>レジストリ パスが存在しません：{0}</value></data>
+  <data name="MsgLoadFailed" xml:space="preserve"><value>レジストリの読み取りに失敗しました：{0}</value></data>
+  <data name="MsgRootMissing" xml:space="preserve"><value>このルートキーにサブキーはありません。</value></data>
+  <data name="AboutText" xml:space="preserve"><value>エクスプローラー アイコン オーバーレイ マネージャー&#xA;バージョン {0}&#xA;エクスプローラーのアイコン オーバーレイ識別子（Shell Icon Overlay Identifiers）を表示・管理します。&#xA;データファイル：{1}</value></data>
+  <data name="TipTop15" xml:space="preserve"><value>ヒント：Windows が使用するのは名前順で上位 15 個までです。</value></data>
+  <data name="AboutRepository" xml:space="preserve"><value>リポジトリ：</value></data>
+</root>

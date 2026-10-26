@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve"><value>Shell Icon Overlay Manager</value></data>
+  <data name="MenuFile" xml:space="preserve"><value>File(&amp;F)</value></data>
+  <data name="MenuRefresh" xml:space="preserve"><value>Refresh(&amp;R)</value></data>
+  <data name="MenuExit" xml:space="preserve"><value>Exit(&amp;X)</value></data>
+  <data name="MenuLanguage" xml:space="preserve"><value>Language(&amp;L)</value></data>
+  <data name="MenuTools" xml:space="preserve"><value>Tools(&amp;T)</value></data>
+  <data name="MenuRestore" xml:space="preserve"><value>Restore Deleted(&amp;H)</value></data>
+  <data name="MenuNew" xml:space="preserve"><value>New Subkey(&amp;N)</value></data>
+  <data name="MenuOpenDataFolder" xml:space="preserve"><value>Open Data Folder(&amp;D)</value></data>
+  <data name="MenuHelp" xml:space="preserve"><value>Help(&amp;H)</value></data>
+  <data name="MenuAbout" xml:space="preserve"><value>About(&amp;A)</value></data>
+  <data name="MenuContextEdit" xml:space="preserve"><value>Edit(&amp;E)</value></data>
+  <data name="MenuContextDelete" xml:space="preserve"><value>Delete(&amp;D)</value></data>
+  <data name="MenuContextCopyName" xml:space="preserve"><value>Copy Name(&amp;C)</value></data>
+  <data name="MenuContextCopyValue" xml:space="preserve"><value>Copy Value(&amp;V)</value></data>
+  <data name="TabHklm" xml:space="preserve"><value>Machine 64-bit (HKEY_LOCAL_MACHINE)</value></data>
+  <data name="TabWow64" xml:space="preserve"><value>Machine 32-bit (WOW6432Node)</value></data>
+  <data name="ColSelect" xml:space="preserve"><value>Select</value></data>
+  <data name="ColOrder" xml:space="preserve"><value>#</value></data>
+  <data name="ColName" xml:space="preserve"><value>Subkey Name</value></data>
+  <data name="ColValue" xml:space="preserve"><value>Value (Default)</value></data>
+  <data name="ColType" xml:space="preserve"><value>Type</value></data>
+  <data name="BtnSelectAll" xml:space="preserve"><value>Select All</value></data>
+  <data name="BtnClearSelection" xml:space="preserve"><value>Clear</value></data>
+  <data name="BtnInvert" xml:space="preserve"><value>Invert</value></data>
+  <data name="BtnDelete" xml:space="preserve"><value>Delete Selected</value></data>
+  <data name="BtnEdit" xml:space="preserve"><value>Edit</value></data>
+  <data name="BtnNew" xml:space="preserve"><value>New</value></data>
+  <data name="BtnRestore" xml:space="preserve"><value>Restore Deleted</value></data>
+  <data name="BtnRefresh" xml:space="preserve"><value>Refresh</value></data>
+  <data name="BtnRestartExplorer" xml:space="preserve"><value>Restart Explorer</value></data>
+  <data name="MsgRestartExplorerConfirm" xml:space="preserve"><value>This will restart Windows Explorer. The desktop and taskbar will disappear briefly. Continue?</value></data>
+  <data name="MsgRestartExplorerFailed" xml:space="preserve"><value>Failed to restart Windows Explorer: {0}</value></data>
+  <data name="MsgExplorerRestarted" xml:space="preserve"><value>Windows Explorer has been restarted.</value></data>
+  <data name="MsgConfirmRestartTitle" xml:space="preserve"><value>Restart Explorer</value></data>
+  <data name="MenuFontSize" xml:space="preserve"><value>Font Size</value></data>
+  <data name="FontSizeSmall" xml:space="preserve"><value>Small</value></data>
+  <data name="FontSizeNormal" xml:space="preserve"><value>Normal</value></data>
+  <data name="FontSizeLarge" xml:space="preserve"><value>Large</value></data>
+  <data name="FontSizeXLarge" xml:space="preserve"><value>Extra Large</value></data>
+  <data name="BtnClose" xml:space="preserve"><value>Close</value></data>
+  <data name="BtnOk" xml:space="preserve"><value>OK</value></data>
+  <data name="BtnCancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="BtnRestoreSelected" xml:space="preserve"><value>Restore Selected</value></data>
+  <data name="BtnDeleteHistory" xml:space="preserve"><value>Delete Records</value></data>
+  <data name="LblSearch" xml:space="preserve"><value>Find:</value></data>
+  <data name="LblName" xml:space="preserve"><value>Name:</value></data>
+  <data name="LblValue" xml:space="preserve"><value>Value (Default):</value></data>
+  <data name="LblValueKind" xml:space="preserve"><value>Value Type:</value></data>
+  <data name="LblRoot" xml:space="preserve"><value>Root Key:</value></data>
+  <data name="LblOnlyUnrestored" xml:space="preserve"><value>Show unrestored only</value></data>
+  <data name="StatusReady" xml:space="preserve"><value>Ready</value></data>
+  <data name="StatusCount" xml:space="preserve"><value>Total: {0}, selected: {1}</value></data>
+  <data name="StatusAdmin" xml:space="preserve"><value>Administrator</value></data>
+  <data name="StatusUser" xml:space="preserve"><value>Standard user (HKLM may be read-only)</value></data>
+  <data name="MsgNoSelection" xml:space="preserve"><value>Please select the subkeys to operate on first.</value></data>
+  <data name="MsgSelectOne" xml:space="preserve"><value>Please select only one subkey to edit.</value></data>
+  <data name="MsgConfirmDeleteTitle" xml:space="preserve"><value>Confirm Delete</value></data>
+  <data name="MsgConfirmDelete" xml:space="preserve"><value>Delete the following {0} subkey(s)? The deleted content is saved to SQLite and can be restored with "Restore Deleted".</value></data>
+  <data name="MsgConfirmDeleteCaption" xml:space="preserve"><value>Subkeys to be deleted:</value></data>
+  <data name="MsgDeleted" xml:space="preserve"><value>Deleted {0} subkey(s).</value></data>
+  <data name="MsgDeleteFailed" xml:space="preserve"><value>Delete error: {0}</value></data>
+  <data name="MsgAdminRequired" xml:space="preserve"><value>Administrator rights are required to modify HKEY_LOCAL_MACHINE. Please run this tool as administrator.</value></data>
+  <data name="MsgError" xml:space="preserve"><value>Error</value></data>
+  <data name="MsgWarning" xml:space="preserve"><value>Warning</value></data>
+  <data name="MsgInfo" xml:space="preserve"><value>Information</value></data>
+  <data name="MsgNameEmpty" xml:space="preserve"><value>The subkey name cannot be empty.</value></data>
+  <data name="MsgNameInvalid" xml:space="preserve"><value>The subkey name cannot contain a backslash (\).</value></data>
+  <data name="MsgNameExists" xml:space="preserve"><value>The subkey "{0}" already exists.</value></data>
+  <data name="MsgNumberInvalid" xml:space="preserve"><value>Invalid number. Enter a decimal value or a hexadecimal value starting with 0x.</value></data>
+  <data name="MsgSaved" xml:space="preserve"><value>Saved.</value></data>
+  <data name="EditTitle" xml:space="preserve"><value>Edit Subkey</value></data>
+  <data name="NewTitle" xml:space="preserve"><value>New Subkey</value></data>
+  <data name="RestoreTitle" xml:space="preserve"><value>History and Restore</value></data>
+  <data name="ColTime" xml:space="preserve"><value>Time</value></data>
+  <data name="ColRoot" xml:space="preserve"><value>Root Key</value></data>
+  <data name="ColOperation" xml:space="preserve"><value>Operation</value></data>
+  <data name="ColKey" xml:space="preserve"><value>Subkey Name</value></data>
+  <data name="ColDetail" xml:space="preserve"><value>Details</value></data>
+  <data name="ColStatus" xml:space="preserve"><value>Status</value></data>
+  <data name="OpDelete" xml:space="preserve"><value>Delete</value></data>
+  <data name="OpCreate" xml:space="preserve"><value>Create</value></data>
+  <data name="OpRename" xml:space="preserve"><value>Rename</value></data>
+  <data name="OpEditValue" xml:space="preserve"><value>Edit Value</value></data>
+  <data name="StatusNotRestored" xml:space="preserve"><value>Not restored</value></data>
+  <data name="StatusRestored" xml:space="preserve"><value>Restored</value></data>
+  <data name="MsgRestoreConfirm" xml:space="preserve"><value>Restore the selected {0} record(s)?</value></data>
+  <data name="MsgRestored" xml:space="preserve"><value>Restored {0} record(s).</value></data>
+  <data name="MsgRestorePartial" xml:space="preserve"><value>Restore finished: {0} succeeded, {1} skipped or failed. {2}</value></data>
+  <data name="MsgRestoreSkip" xml:space="preserve"><value>Subkey "{0}" does not match the expected state, skipped.</value></data>
+  <data name="MsgNoHistory" xml:space="preserve"><value>No history records available.</value></data>
+  <data name="MsgHistoryDeleted" xml:space="preserve"><value>Deleted {0} history record(s).</value></data>
+  <data name="MsgConfirmClearHistory" xml:space="preserve"><value>Delete the selected {0} history record(s)? This only removes records, the registry is not modified.</value></data>
+  <data name="TrayShow" xml:space="preserve"><value>Show Main Window</value></data>
+  <data name="TrayExit" xml:space="preserve"><value>Exit</value></data>
+  <data name="TrayBalloonTitle" xml:space="preserve"><value>Minimized to the system tray</value></data>
+  <data name="MsgConfirmExit" xml:space="preserve"><value>Are you sure you want to quit ShellIcon-OverlayManager?</value></data>
+  <data name="MsgConfirmExitTitle" xml:space="preserve"><value>Confirm Exit</value></data>
+  <data name="TrayBalloonText" xml:space="preserve"><value>Double-click the tray icon to reopen the window; use the tray menu to switch languages.</value></data>
+  <data name="MsgRegistryMissing" xml:space="preserve"><value>The registry path does not exist: {0}</value></data>
+  <data name="MsgLoadFailed" xml:space="preserve"><value>Failed to read the registry: {0}</value></data>
+  <data name="MsgRootMissing" xml:space="preserve"><value>There is no subkey under this root key.</value></data>
+  <data name="AboutText" xml:space="preserve"><value>Shell Icon Overlay Manager&#xA;Version {0}&#xA;View and manage the Shell Icon Overlay Identifiers of Windows Explorer.&#xA;Data file: {1}</value></data>
+  <data name="TipTop15" xml:space="preserve"><value>Tip: Windows uses only the first 15 identifiers (sorted by name).</value></data>
+  <data name="AboutRepository" xml:space="preserve"><value>Repository:</value></data>
+</root>

@@ -1,0 +1,131 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net47</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>ShellIconOverlayManager</RootNamespace>
+    <!-- 程序集名决定语言资源文件名：ShellIcon-OverlayManager.resources.dll -->
+    <AssemblyName>ShellIcon-OverlayManager</AssemblyName>
+    <LangVersion>9.0</LangVersion>
+    <Platforms>AnyCPU</Platforms>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>ShellIcon-OverlayManager.ico</ApplicationIcon>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Company>ShellIconOverlayManager</Company>
+    <Product>Shell Icon Overlay Manager</Product>
+    <Version>26.10.0</Version>
+    <FileVersion>26.10.0.0</FileVersion>
+    <NeutralLanguage>en</NeutralLanguage>
+    <SatelliteResourceLanguages>en;zh-CN;zh-TW;ja-JP;ko-KR</SatelliteResourceLanguages>
+    <EnableDefaultNoneItems>true</EnableDefaultNoneItems>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <!-- 发行版：不生成 pdb 文件 -->
+    <DebugType>none</DebugType>
+    <!-- 发行版：输出直接落在 bin\Release\，不再多一层 net47 目录（项目只有一个目标框架） -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- 顺带清理历史版本遗留在输出目录下的 net47 子目录 -->
+    <LegacyFrameworkFolders>$(MSBuildProjectDirectory)\bin\Release\net47;$(MSBuildProjectDirectory)\bin\Release\Languages\net47</LegacyFrameworkFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- .NET Framework 4.7 引用程序集（保证未安装 4.7 SDK 的机器也能编译） -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <!-- SQLite 引擎 -->
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Strings.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Strings.en.resx">
+      <Culture>en</Culture>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Strings.zh-CN.resx">
+      <Culture>zh-CN</Culture>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Strings.zh-TW.resx">
+      <Culture>zh-TW</Culture>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Strings.ja-JP.resx">
+      <Culture>ja-JP</Culture>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Strings.ko-KR.resx">
+      <Culture>ko-KR</Culture>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <!-- 发行版不输出散落的 ico 文件（图标已内嵌到 exe 中） -->
+  <ItemGroup Condition="'$(Configuration)' != 'Release'">
+    <None Update="ShellIcon-OverlayManager.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!-- 发行版：把 LICENSE 与 5 个语言版 README（位于解决方案根目录）输出到安装目录的 Readme 文件夹下 -->
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <!-- 文件在项目目录之外，必须用 Link 指定输出位置，否则会带出 ..\ 目录层级 -->
+    <None Include="$(MSBuildProjectDirectory)\..\LICENSE"
+          Link="Readme\LICENSE"
+          CopyToOutputDirectory="PreserveNewest"
+          Condition="Exists('$(MSBuildProjectDirectory)\..\LICENSE')" />
+    <None Include="$(MSBuildProjectDirectory)\..\README*.md"
+          Link="Readme\%(Filename)%(Extension)"
+          CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- 再把 ico 作为程序集资源嵌入一份（不落地到输出目录），便于高 DPI 下取 256px 高清帧 -->
+  <ItemGroup>
+    <EmbeddedResource Include="ShellIcon-OverlayManager.ico" LogicalName="ShellIconOverlayManager.AppIcon.ico" />
+  </ItemGroup>
+
+  <!-- 发行版：清理历史版本遗留在输出目录下的 net47 目录 -->
+  <Target Name="RemoveLegacyFrameworkFolder" BeforeTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <ItemGroup>
+      <_LegacyFiles Include="$(LegacyFrameworkFolders)\**\*" />
+      <_LegacyDirs Include="$(LegacyFrameworkFolders)" />
+    </ItemGroup>
+    <Delete Files="@(_LegacyFiles)" ContinueOnError="true" Condition="'@(_LegacyFiles)' != ''" />
+    <RemoveDir Directories="@(_LegacyDirs)" ContinueOnError="true" Condition="'@(_LegacyDirs)' != ''" />
+  </Target>
+
+  <!-- 五种语言资源统一输出到 Languages\<culture>\ShellIcon-OverlayManager.resources.dll -->
+  <Target Name="MoveSatellitesToLanguagesFolder" AfterTargets="Build">
+    <ItemGroup>
+      <_SatelliteDll Include="$(TargetDir)**\$(TargetName).resources.dll" />
+      <!-- 排除已经搬到 Languages 下的条目，避免每次编译重复递归搬运 -->
+      <_SatelliteDll Remove="$(TargetDir)Languages\**\*.resources.dll" />
+      <_SatelliteDll Remove="$(TargetDir)**\Languages\**\*.resources.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_SatelliteDll)"
+          DestinationFiles="@(_SatelliteDll->'$(TargetDir)Languages\%(RecursiveDir)%(Filename)%(Extension)')"
+          Condition="'@(_SatelliteDll)' != ''" />
+    <Delete Files="@(_SatelliteDll)" Condition="'@(_SatelliteDll)' != ''" />
+    <RemoveDir Directories="@(_SatelliteDll->'$(TargetDir)%(RecursiveDir)')" Condition="'@(_SatelliteDll)' != ''" />
+  </Target>
+
+  <!-- 发行版：不输出 App.config 生成的 .exe.config -->
+  <Target Name="RemoveAppConfigInRelease" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Delete Files="$(TargetDir)$(TargetFileName).config" />
+  </Target>
+
+  <!-- 发行版：清理旧版本直接留在安装目录根下的 LICENSE（现已统一放到 Readme 文件夹） -->
+  <Target Name="RemoveRootLicenseInRelease" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Delete Files="$(TargetDir)LICENSE" />
+  </Target>
+
+  <!-- 清理解决方案时把输出目录彻底清空：MSBuild 的 Clean 只删除它登记过的文件，
+       自定义 Target 移动/复制的文件（Languages）、以及空文件夹（Readme、x64、x86）都会遗留。
+       注意 MSBuild 通配符只匹配文件不匹配目录，所以直接用 rd /s /q 删除整个输出目录，下次编译会自动重建 -->
+  <Target Name="CleanOutputFolderCompletely" AfterTargets="Clean">
+    <Exec Command="rd /s /q &quot;$(TargetDir).&quot;" ContinueOnError="true" IgnoreExitCode="true" Condition="Exists('$(TargetDir)')" />
+  </Target>
+
+</Project>
